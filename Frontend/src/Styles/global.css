@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/* 🌈 Custom Global Styles */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    /* Slightly dark text for readability */
+}
+
+/* 🔵 Animated Gradient Background (used on Login.jsx) */
+@keyframes gradient-x {
+
+    0%,
+    100% {
+        background-position: left center;
+    }
+
+    50% {
+        background-position: right center;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 8s ease infinite;
+}
+
+/* 💎 Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e5e7eb;
+}
