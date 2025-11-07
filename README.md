@@ -3,6 +3,7 @@
 A **full-stack Police Crime Management System** built using **React (frontend)**, **Node.js + Express (backend)**, and **Oracle Database**.  
 This project enables secure digital management of **crimes, FIRs, suspects, officers, and case details** — with **JWT authentication** and a modern dashboard UI built with Tailwind CSS.
 
+> This project is developed as my **DBMS Mini Project**.
 ---
 
 ## 🧩 Features
