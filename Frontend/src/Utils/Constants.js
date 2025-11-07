@@ -1,9 +1,11 @@
+export const API_BASE_URL = "http://localhost:5000/api";
+
 export const API_ENDPOINTS = {
-    crimes: "/crimes",
-    officers: "/officers",
-    suspects: "/suspects",
-    cases: "/cases",
-    firs: "/firs",
+    crimes: `${API_BASE_URL}/crimes`,
+    officers: `${API_BASE_URL}/officers`,
+    suspects: `${API_BASE_URL}/suspects`,
+    cases: `${API_BASE_URL}/cases`,
+    firs: `${API_BASE_URL}/firs`,
 };
 
 export const ROLE_LABELS = {
