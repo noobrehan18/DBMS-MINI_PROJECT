@@ -1,11 +1,12 @@
 {
-  "buildCommand": "rm -rf node_modules package-lock.json && npm install && npm run build",
-  "outputDirectory": "dist",
+  "installCommand": "cd Frontend && npm ci",
+  "buildCommand": "cd Frontend && npm run build",
+  "outputDirectory": "Frontend/dist",
   "framework": "vite",
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/index.html"
     }
   ],
   "headers": [
