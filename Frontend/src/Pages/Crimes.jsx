@@ -3,7 +3,7 @@ import Input from "../Component/Input";
 import Loader from "../Component/Loader";
 import Table from "../Component/Table";
 import api from "../Api/Api";
-import useFetch from "../Hooks/useFetch";
+import useFetch from "../Hooks/UseFetch";
 import { API_ENDPOINTS } from "../Utils/Constants";
 
 export default function Crimes() {
