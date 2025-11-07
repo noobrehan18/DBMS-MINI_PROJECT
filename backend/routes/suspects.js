@@ -39,7 +39,7 @@ router.post("/", authenticateToken, authorizeRoles("admin", "officer"), async (r
     }
 });
 
-// 🔹 PUT update suspect
+//  PUT update suspect
 router.put("/:id", authenticateToken, authorizeRoles("admin", "officer"), async (req, res) => {
     const { id } = req.params;
     const { NAME, AGE, GENDER, ADDRESS, CRIME_RECORD_STATUS } = req.body;
@@ -60,7 +60,7 @@ router.put("/:id", authenticateToken, authorizeRoles("admin", "officer"), async 
     }
 });
 
-// 🔹 DELETE suspect
+//  DELETE suspect
 router.delete("/:id", authenticateToken, authorizeRoles("admin"), async (req, res) => {
     const { id } = req.params;
     let conn;

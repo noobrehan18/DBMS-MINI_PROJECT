@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = process.env.JWT_SECRET || "super_secret_key";
 
-// ✅ Verify JWT token
+//  Verify JWT token
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
@@ -20,7 +20,7 @@ function authenticateToken(req, res, next) {
   });
 }
 
-// ✅ Role-based Access Control
+//  Role-based Access Control
 function authorizeRoles(...allowedRoles) {
   return (req, res, next) => {
     const userRole = req.user?.role;

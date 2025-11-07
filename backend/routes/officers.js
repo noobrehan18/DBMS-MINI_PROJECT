@@ -5,7 +5,7 @@ const { authenticateToken, authorizeRoles } = require("../middleware/auth");
 
 const router = express.Router();
 
-// 🔹 GET all officers
+//  GET all officers
 router.get("/", authenticateToken, async (req, res) => {
     let conn;
     try {
@@ -20,7 +20,7 @@ router.get("/", authenticateToken, async (req, res) => {
     }
 });
 
-// 🔹 POST (Add)
+//  POST (Add)
 router.post("/", authenticateToken, authorizeRoles("admin"), async (req, res) => {
     const { NAME, RANK, CONTACT_NO, STATION_ID } = req.body;
     let conn;
@@ -41,7 +41,7 @@ router.post("/", authenticateToken, authorizeRoles("admin"), async (req, res) =>
     }
 });
 
-// 🔹 PUT (Update)
+//  PUT (Update)
 router.put("/:id", authenticateToken, authorizeRoles("admin"), async (req, res) => {
     const { id } = req.params;
     const { NAME, RANK, CONTACT_NO, STATION_ID } = req.body;
@@ -64,7 +64,7 @@ router.put("/:id", authenticateToken, authorizeRoles("admin"), async (req, res) 
     }
 });
 
-// 🔹 DELETE
+//  DELETE
 router.delete("/:id", authenticateToken, authorizeRoles("admin"), async (req, res) => {
     const { id } = req.params;
     let conn;

@@ -5,7 +5,7 @@ const { authenticateToken, authorizeRoles } = require("../middleware/auth");
 
 const router = express.Router();
 
-// 🔹 GET all FIRs
+//  GET all FIRs
 router.get("/", authenticateToken, async (req, res) => {
     let conn;
     try {
@@ -24,7 +24,7 @@ router.get("/", authenticateToken, async (req, res) => {
     }
 });
 
-// 🔹 POST add FIR
+//  POST add FIR
 router.post("/", authenticateToken, authorizeRoles("admin", "officer"), async (req, res) => {
     const {
         COMPLAINT_ID,
@@ -81,7 +81,7 @@ router.post("/", authenticateToken, authorizeRoles("admin", "officer"), async (r
     }
 });
 
-// 🔹 PUT update FIR
+//  PUT update FIR
 router.put("/:id", authenticateToken, authorizeRoles("admin", "officer"), async (req, res) => {
     const { id } = req.params;
     const {
@@ -132,7 +132,7 @@ router.put("/:id", authenticateToken, authorizeRoles("admin", "officer"), async 
     }
 });
 
-// 🔹 DELETE FIR
+//  DELETE FIR
 router.delete("/:id", authenticateToken, authorizeRoles("admin"), async (req, res) => {
     const { id } = req.params;
     let conn;

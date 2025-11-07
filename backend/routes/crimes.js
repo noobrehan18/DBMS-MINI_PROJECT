@@ -6,7 +6,7 @@ const { authenticateToken, authorizeRoles } = require("../middleware/auth");
 const router = express.Router();
 
 /**
- * 🔹 GET all crimes
+ *  GET all crimes
  */
 router.get("/", authenticateToken, async (req, res) => {
   let conn;
@@ -29,7 +29,7 @@ router.get("/", authenticateToken, async (req, res) => {
 });
 
 /**
- * 🔹 POST add crime
+ *  POST add crime
  */
 router.post(
   "/",
@@ -64,7 +64,7 @@ router.post(
 );
 
 /**
- * 🔹 PUT update crime
+ *  PUT update crime
  */
 router.put(
   "/:id",
@@ -101,7 +101,7 @@ router.put(
 );
 
 /**
- * 🔹 DELETE crime
+ *  DELETE crime
  */
 router.delete(
   "/:id",
