@@ -63,7 +63,7 @@ export default function Cases() {
                 <Input label="Crime ID" name="CRIME_ID" value={form.CRIME_ID} onChange={handleChange} />
                 <Input label="Officer ID" name="OFFICER_ID" value={form.OFFICER_ID} onChange={handleChange} />
                 <Input label="FIR No" name="FIR_NO" value={form.FIR_NO} onChange={handleChange} />
-                <Input label="Date Assigned" type="date" name="DATE_ASSIGNED" value={form.DATE_FIELD ? form.DATE_ASSIGNED.substring(0, 10) : ""} onChange={handleChange} />
+                <Input label="Date Assigned" type="date" name="DATE_ASSIGNED" value={form.DATE_ASSIGNED ? form.DATE_ASSIGNED.substring(0, 10) : ""} onChange={handleChange} />
                 <Input label="Status" name="STATUS" value={form.STATUS} onChange={handleChange} />
                 <button className="col-span-2 bg-blue-600 text-white py-2 rounded-md">
                     {editingId ? "Update Case" : "Add Case"}

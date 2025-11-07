@@ -61,7 +61,7 @@ export default function Crimes() {
             <h2 className="text-2xl font-semibold mb-4">Crimes</h2>
             <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-3 bg-white p-4 rounded-lg mb-6">
                 <Input label="Type" name="CRIME_TYPE" value={form.CRIME_TYPE} onChange={handleChange} />
-                <Input label="Date" type="date" name="CRIME_DATE" value={form.DATE_FIELD ? form.CRIME_DATE.substring(0, 10) : ""} onChange={handleChange} />
+                <Input label="Date" type="date" name="CRIME_DATE" value={form.CRIME_DATE ? form.CRIME_DATE.substring(0, 10) : ""} onChange={handleChange} />
                 <Input label="Location" name="CRIME_LOCATION" value={form.CRIME_LOCATION} onChange={handleChange} />
                 <Input label="Description" name="DESCRIPTION" value={form.DESCRIPTION} onChange={handleChange} />
                 <Input label="Victim" name="VICTIM_NAME" value={form.VICTIM_NAME} onChange={handleChange} />

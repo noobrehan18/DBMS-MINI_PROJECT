@@ -12,58 +12,63 @@ import Firs from "./Pages/Firs";
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route element={<Layout />}>
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/crimes"
-          element={
-            <ProtectedRoute allowedRoles={["admin", "officer"]}>
-              <Crimes />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/officers"
-          element={
-            <ProtectedRoute allowedRoles={["admin"]}>
-              <Officers />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/suspects"
-          element={
-            <ProtectedRoute allowedRoles={["admin", "officer"]}>
-              <Suspects />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/cases"
-          element={
-            <ProtectedRoute allowedRoles={["admin", "officer"]}>
-              <Cases />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/firs"
-          element={
-            <ProtectedRoute allowedRoles={["admin", "officer"]}>
-              <Firs />
-            </ProtectedRoute>
-          }
-        />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        {/* Public Route */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Protected Routes inside Layout */}
+        <Route element={<Layout />}>
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/crimes"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "officer"]}>
+                <Crimes />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/officers"
+            element={
+              <ProtectedRoute allowedRoles={["admin"]}>
+                <Officers />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/suspects"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "officer"]}>
+                <Suspects />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/cases"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "officer"]}>
+                <Cases />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/firs"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "officer"]}>
+                <Firs />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+      </Routes>
+    </>
   );
 }
